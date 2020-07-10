@@ -1,9 +1,3 @@
-import glassesPhoto from '../images/glasses-photo.jpg';
-import jantiesPhoto from '../images/janties-photo.jpg';
-import hatsPhoto from '../images/hats-photo.jpg';
-import storyPhoto from '../images/story-photo.jpg';
-import aboutPhoto from '../images/about-photo.jpg';
-
 export const sections = [
   {
     id: "glasses",
@@ -12,7 +6,7 @@ export const sections = [
     descP2: "Custom options available. Each pair is unique, one of a kind.",
     descP3: "",
     descP4: "",
-    img: glassesPhoto,
+    img: "glassesPhoto",
     title: "GLASSES",
     url: "https://www.depop.com/grannyfab/"
   },
@@ -23,7 +17,7 @@ export const sections = [
     descP2: "Custom options available.",
     descP3: "",
     descP4: "",
-    img: jantiesPhoto,
+    img: "jantiesPhoto",
     title: "JANTIES",
     url: "https://www.depop.com/grannyfab/"
   },
@@ -34,7 +28,7 @@ export const sections = [
     descP2: "Whether it be our one-of-a-kind Puffy Pussy Hats, wedding headdresses, or just something funky to wear out on the town, we have your dome covered!",
     descP3: "Custom options are available.",
     descP4: "",
-    img: hatsPhoto,
+    img: "hatsPhoto",
     title: "HATS / HEADDRESSES",
     url: "https://www.depop.com/grannyfab/"
   },
@@ -45,7 +39,7 @@ export const sections = [
     descP2: "Hand crafted in culture capital Austin, Texas, there's no custom order too complex. We utilize and reuse found sparkle pieces in order to create a completely unique accessory for your ensembles.",
     descP3: "",
     descP4: "",
-    img: storyPhoto,
+    img: "storyPhoto",
     title: "STORY",
     url: "https://www.depop.com/grannyfab/"
   },
@@ -56,7 +50,7 @@ export const sections = [
     descP2: "Why the 'Granny' of Granny Fab? Emily's Granny used to say her favorite color was sparkle, and let's just say the sequins didn't fall far from that tree.",
     descP3: "",
     descP4: "",
-    img: aboutPhoto,
+    img: "aboutPhoto",
     title: "ABOUT EMILY",
     url: "https://www.depop.com/grannyfab/"
   }

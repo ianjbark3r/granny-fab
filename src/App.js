@@ -10,7 +10,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="container-fluid">
+        <div className="container-lg">
           <Hero />
           {sections.map((section, index) => {
             let nextIndex = index + 1;

@@ -1,35 +1,12 @@
 import React, { Component } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
-const largeImageClasses = "col-md-6 d-none d-lg-block"
-
-const smallImageClasses = "col-sm-12 d-block d-lg-none"
+import { assets } from '../images/Assets';
 
 const descriptionClasses = "col-md col-10"
 
-const titleStyles = {
-  fontSize:"2.5rem", 
-  fontWeight:"700", 
-  marginBottom:"3vh",
-  paddingTop:"calc(4vh + 5vw)"
-}
+const imageClasses = "img-fluid mx-auto"
 
-const sectionStyles = {
-  
-}
-
-const descriptionStyles = {
-  height:"100vh",
-  margin:"0 7vw 0 7vw"
-}
-
-const descriptionItemStyles = {
-  fontFamily:"Helvetica Neue, Arial, sans-serif",
-  fontSize:"1.1rem",
-  fontWeight:"500",
-  lineHeight:"1.7rem",
-  marginBottom:"2.8vh"
-}
 
 const buttonStyles = {
   backgroundColor:"#FFF",
@@ -40,18 +17,14 @@ const buttonStyles = {
   width:"10rem"
 }
 
-const scrollArrowStyles = {
-  position: "absolute",
-  bottom: "4vh",
-  left: "50%",
-  width: "24px",
-  height: "24px",
-  marginLeft: "-12px",
-  borderLeft: "4px solid #000",
-  borderBottom: "4px solid #000",
-  WebkitTransform: "rotate(-45deg)",
-  transform: "rotate(-45deg)",
-  boxSizing: "border-box"
+const descriptionStyles = {
+  height:"100vh",
+  margin:"0 7vw 0 7vw"
+}
+
+const largeImageStyles = {
+  height: "100vh",
+  width: "auto"
 }
 
 const darkScrollArrowStyles = {
@@ -68,6 +41,44 @@ const darkScrollArrowStyles = {
   boxSizing: "border-box"
 }
 
+const descriptionItemStyles = {
+  fontFamily:"Helvetica Neue, Arial, sans-serif",
+  fontSize:"1.1rem",
+  fontWeight:"500",
+  lineHeight:"1.7rem",
+  marginBottom:"2.8vh"
+}
+
+const scrollArrowStyles = {
+  position: "absolute",
+  bottom: "4vh",
+  left: "50%",
+  width: "24px",
+  height: "24px",
+  marginLeft: "-12px",
+  borderLeft: "4px solid #000",
+  borderBottom: "4px solid #000",
+  WebkitTransform: "rotate(-45deg)",
+  transform: "rotate(-45deg)",
+  boxSizing: "border-box"
+}
+
+const sectionStyles = {
+  
+}
+
+const smallImageStyles = {
+  width: "100%",
+  height: "auto"
+}
+
+const titleStyles = {
+  fontSize:"2.5rem", 
+  fontWeight:"700", 
+  marginBottom:"3vh",
+  paddingTop:"calc(4vh + 5vw)"
+}
+
 export default class Section extends Component {
   render() {
     const { 
@@ -82,29 +93,6 @@ export default class Section extends Component {
       url
     } = this.props.section;
 
-    const largeImageStyles = {
-      backgroundAttachment:"fixed",
-      backgroundImage:`url(${img})`,
-      backgroundPosition:"left",
-      backgroundSize:"contain",
-      height:"100vh"
-    }
-
-    const largeImageStylesRight = {
-      backgroundAttachment:"fixed",
-      backgroundImage:`url(${img})`,
-      backgroundPosition:"right",
-      backgroundSize:"contain",
-      height:"100vh"
-    }
-
-    const smallImageStyles = {
-      backgroundImage:`url(${img})`,
-      backgroundPosition:"center",
-      backgroundSize:"cover",
-      height:"100vh"
-    }
-
     if (this.props.index % 2 === 0) {
       return (
         <section 
@@ -113,8 +101,23 @@ export default class Section extends Component {
           key={`Section${id}`}
           id={`${id}`}
         >
-          <div style={largeImageStyles} className={largeImageClasses} key={`LargeImage${id}`}></div>
-          <div style={smallImageStyles} className={smallImageClasses} key={`SmallImage${id}`}>
+          <div className="col-md-7 d-none d-lg-block">
+            <img
+              src={assets[img]}
+              style={largeImageStyles}
+              className={imageClasses}
+              key={`img-lg-${id}`}
+              alt=""
+            ></img>
+          </div>
+          <div className="col-sm-12 d-block d-lg-none">
+            <img
+              src={assets[img]}
+              style={smallImageStyles}
+              className={imageClasses}
+              key={`img-sm-${id}`}
+              alt=""
+            ></img>
             <AnchorLink href={`#${id}-desc`}>
               <span style={darkScrollArrowStyles}></span>
             </AnchorLink>
@@ -142,7 +145,14 @@ export default class Section extends Component {
           key={`Section${id}`}
           id={`${id}`}
         >
-          <div style={smallImageStyles} className={smallImageClasses} key={`SmallImage${id}`}>
+          <div className="col-sm-12 d-block d-lg-none">
+            <img
+              src={assets[img]}
+              style={smallImageStyles}
+              className={imageClasses}
+              key={`img-sm-${id}`}
+              alt=""
+            ></img>
             <AnchorLink href={`#${id}-desc`}>
               <span style={darkScrollArrowStyles}></span>
             </AnchorLink>
@@ -160,7 +170,15 @@ export default class Section extends Component {
               <span style={scrollArrowStyles}></span>
             </AnchorLink>
           </div>
-          <div style={largeImageStylesRight} className={largeImageClasses} key={`LargeImage${id}`}></div>
+          <div className="col-md-6 d-none d-lg-block">
+            <img
+              src={assets[img]}
+              style={largeImageStyles}
+              className={imageClasses}
+              key={`img-lg-${id}`}
+              alt=""
+            ></img>
+          </div>
         </section>
       )
     }
