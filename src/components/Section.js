@@ -5,7 +5,7 @@ const largeImageClasses = "col-md-6 d-none d-lg-block"
 
 const smallImageClasses = "col-sm-12 d-block d-lg-none"
 
-const descriptionClasses = "col-md col-sm-10"
+const descriptionClasses = "col-md col-10"
 
 const titleStyles = {
   fontSize:"2.5rem", 
@@ -24,7 +24,7 @@ const descriptionStyles = {
 }
 
 const descriptionItemStyles = {
-  fontFamily:"Helvetica Neue",
+  fontFamily:"Helvetica Neue, Arial, sans-serif",
   fontSize:"1.1rem",
   fontWeight:"500",
   lineHeight:"1.7rem",
@@ -125,7 +125,9 @@ export default class Section extends Component {
             {descP2 && <p style={descriptionItemStyles} key={`DescriptionItem2${id}`}>{descP2}</p>}
             {descP3 && <p style={descriptionItemStyles} key={`DescriptionItem3${id}`}>{descP3}</p>}
             {descP4 && <p style={descriptionItemStyles} key={`DescriptionItem4${id}`}v>{descP4}</p>}
-            <button style={buttonStyles} key={`Button${id}`}>{buttonTxt}</button>
+            <a href={`${url}`}>
+              <button style={buttonStyles} key={`Button${id}`}>{buttonTxt}</button>
+            </a>
             <AnchorLink href={`#${this.props.nextId}`}>
               <span style={scrollArrowStyles}></span>
             </AnchorLink>
@@ -151,7 +153,9 @@ export default class Section extends Component {
             {descP2 && <p style={descriptionItemStyles} key={`DescriptionItem2${id}`}>{descP2}</p>}
             {descP3 && <p style={descriptionItemStyles} key={`DescriptionItem3${id}`}>{descP3}</p>}
             {descP4 && <p style={descriptionItemStyles} key={`DescriptionItem4${id}`}>{descP4}</p>}
-            <button style={buttonStyles} key={`Button${id}`}>{buttonTxt}</button>
+            <a href={`${url}`}>
+              <button style={buttonStyles} key={`Button${id}`}>{buttonTxt}</button>
+            </a>
             <AnchorLink href={`#${this.props.nextId}`}>
               <span style={scrollArrowStyles}></span>
             </AnchorLink>

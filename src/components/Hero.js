@@ -2,6 +2,7 @@ import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import heroBg from '../images/hero-bg.jpg';
+import logo from '../gfab-logo.png';
 
 const bgStyles= {
   backgroundImage:`url(${heroBg})`,
@@ -12,27 +13,45 @@ const bgStyles= {
 }
 
 const largeTitleStyles = { 
-  fontFamily:"Helvetica Neue", 
+  fontFamily:"Helvetica Neue, Arial, sans-serif", 
   fontSize:"14vw", 
   fontWeight:"600", 
-  paddingTop:"calc(8vh + 8vw)",
+  paddingTop:"8vh",
   textShadow:"0px 2px 4px #000" 
 }
 
+const logoStylesDesktop = {
+  paddingTop: "12vh",
+  maxWidth: "85vw"
+}
+
+const logoStylesMobile = {
+  paddingTop: "15vh",
+  maxWidth: "90vw"
+}
+
 const smallTitleStyles = { 
-  fontFamily:"Helvetica Neue", 
+  fontFamily:"Helvetica Neue, Arial, sans-serif", 
   fontSize:"6rem", 
   fontWeight:"600", 
   paddingTop:"14vh",
   textShadow:"0px 2px 4px #000" 
 }
 
-const subtitleStyles = { 
-  fontFamily:"Helvetica Neue", 
-  fontSize:"2.2rem",
+const subtitleStylesDesktop = { 
+  fontFamily:"Helvetica Neue, Arial, sans-serif", 
+  fontSize:"2rem",
   lineHeight:"2.5rem", 
-  marginTop:"2.5vh",
+  marginTop:"-10vw",
   textShadow:"0px 2px 3px #000" 
+}
+
+const subtitleStylesMobile = {
+  fontFamily: "Helvetica Neue, Arial, sans-serif",
+  fontSize: "1.5rem",
+  lineHeight: "2rem",
+  marginTop: "2.5vh",
+  textShadow: "0px 2px 3px #000"
 }
 
 const buttonStyles = {
@@ -50,19 +69,22 @@ const Hero = () => {
       <div style={bgStyles} className="row justify-content-center">
         <div className="col-sm-10 text-center">
           <h1 style={largeTitleStyles} className="display-1 d-none d-lg-block">
-            Granny Fab
+            <img style={logoStylesDesktop} src={logo} alt="Granny Fab Accoutrements" />
           </h1>
           <h1 style={smallTitleStyles} className="display-1 d-block d-lg-none">
-            Granny Fab
+            <img style={logoStylesMobile} src={logo} alt="Granny Fab Accoutrements" />
           </h1>         
-          <p style={subtitleStyles}
-          >
-            <strong>
+          <p style={subtitleStylesDesktop} className="d-none d-lg-block">
               <span style={{ display:"block" }}>For when your</span>
               <span style={{ display:"block" }}>favorite color is sparkle</span>
-            </strong>
-          </p>      
-          <button style={buttonStyles} className="mr-2">shop</button>
+          </p>
+          <p style={subtitleStylesMobile} className="d-block d-lg-none">
+              <span style={{ display:"block" }}>For when your</span>
+              <span style={{ display:"block" }}>favorite color is sparkle</span>
+          </p>
+          <a href="https://www.depop.com/grannyfab/">
+            <button style={buttonStyles} className="mr-2">shop</button>
+          </a>
           <AnchorLink href="#glasses">
             <button style={buttonStyles}>learn more</button>
           </AnchorLink>
