@@ -68,8 +68,9 @@ const sectionStyles = {
 }
 
 const smallImageStyles = {
-  width: "100%",
-  height: "auto"
+  height: "100vh",
+  padding: "0 -5vw",
+  width: "auto"
 }
 
 const titleStyles = {
@@ -89,6 +90,7 @@ export default class Section extends Component {
       descP3,
       descP4,
       img,
+      mobile,
       title,
       url
     } = this.props.section;
@@ -112,7 +114,7 @@ export default class Section extends Component {
           </div>
           <div className="col-sm-12 d-block d-lg-none">
             <img
-              src={assets[img]}
+              src={assets[mobile]}
               style={smallImageStyles}
               className={imageClasses}
               key={`img-sm-${id}`}
@@ -147,7 +149,7 @@ export default class Section extends Component {
         >
           <div className="col-sm-12 d-block d-lg-none">
             <img
-              src={assets[img]}
+              src={assets[mobile]}
               style={smallImageStyles}
               className={imageClasses}
               key={`img-sm-${id}`}

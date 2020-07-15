@@ -7,6 +7,7 @@ export const sections = [
     descP3: "",
     descP4: "",
     img: "glassesPhoto",
+    mobile: "glassesMobile",
     title: "GLASSES",
     url: "https://www.depop.com/grannyfab/"
   },
@@ -18,6 +19,7 @@ export const sections = [
     descP3: "",
     descP4: "",
     img: "jantiesPhoto",
+    mobile: "jantiesMobile",
     title: "JANTIES",
     url: "https://www.depop.com/grannyfab/"
   },
@@ -29,6 +31,7 @@ export const sections = [
     descP3: "Custom options are available.",
     descP4: "",
     img: "hatsPhoto",
+    mobile: "hatsMobile",
     title: "HATS / HEADDRESSES",
     url: "https://www.depop.com/grannyfab/"
   },
@@ -40,6 +43,7 @@ export const sections = [
     descP3: "",
     descP4: "",
     img: "storyPhoto",
+    mobile: "storyMobile",
     title: "STORY",
     url: "https://www.depop.com/grannyfab/"
   },
@@ -51,6 +55,7 @@ export const sections = [
     descP3: "",
     descP4: "",
     img: "aboutPhoto",
+    mobile: "aboutMobile",
     title: "ABOUT EMILY",
     url: "https://www.depop.com/grannyfab/"
   }
