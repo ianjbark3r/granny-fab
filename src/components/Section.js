@@ -3,9 +3,11 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import { assets } from '../images/Assets';
 
-const descriptionClasses = "col-md col-10"
+const descriptionClasses = "col-md col-10";
 
-const imageClasses = "img-fluid mx-auto"
+const imageClasses = "img-fluid mx-auto";
+
+const imageDivClasses = "col-md-6 d-none d-lg-block";
 
 
 const buttonStyles = {
@@ -24,6 +26,7 @@ const descriptionStyles = {
 
 const largeImageStyles = {
   height: "100vh",
+  objectFit: "cover",
   width: "auto"
 }
 
@@ -69,7 +72,7 @@ const sectionStyles = {
 
 const smallImageStyles = {
   height: "100vh",
-  padding: "0 -5vw",
+  objectFit: "cover",
   width: "auto"
 }
 
@@ -103,7 +106,7 @@ export default class Section extends Component {
           key={`Section${id}`}
           id={`${id}`}
         >
-          <div className="col-md-7 d-none d-lg-block">
+          <div className={imageDivClasses}>
             <img
               src={assets[img]}
               style={largeImageStyles}
@@ -172,7 +175,7 @@ export default class Section extends Component {
               <span style={scrollArrowStyles}></span>
             </AnchorLink>
           </div>
-          <div className="col-md-6 d-none d-lg-block">
+          <div className={imageDivClasses}>
             <img
               src={assets[img]}
               style={largeImageStyles}
