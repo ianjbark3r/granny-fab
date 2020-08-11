@@ -64,12 +64,12 @@ const HeroContent = () => {
         <img style={logoStylesMobile} src={logo} alt="Granny Fab Accoutrements" />
       </h1>
       <p style={subtitleStylesDesktop} className="d-none d-lg-block">
-        <span style={{ display: "block" }}>For when your</span>
-        <span style={{ display: "block" }}>favorite color is sparkle</span>
+        <span style={{ display: "block" }}>when your favorite</span>
+        <span style={{ display: "block" }}>color is sparkle</span>
       </p>
       <p style={subtitleStylesMobile} className="d-block d-lg-none">
-        <span style={{ display: "block" }}>For when your</span>
-        <span style={{ display: "block" }}>favorite color is sparkle</span>
+        <span style={{ display: "block" }}>when your favorite</span>
+        <span style={{ display: "block" }}>color is sparkle</span>
       </p>
       <a href="https://www.depop.com/grannyfab/">
         <button style={buttonStyles} className="mr-2">shop</button>

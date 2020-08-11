@@ -7,7 +7,11 @@ const descriptionClasses = "col-md col-10";
 
 const imageClasses = "img-fluid mx-auto";
 
-const imageDivClasses = "col-md-6 d-none d-lg-block";
+const imageDivClasses = "col-md-6 d-none d-lg-block px-0";
+
+const mobileImageClasses = "col-sm d-block d-lg-none px-0";
+
+const rowClasses = "row justify-content-center";
 
 
 const buttonStyles = {
@@ -66,10 +70,6 @@ const scrollArrowStyles = {
   boxSizing: "border-box"
 }
 
-const sectionStyles = {
-  
-}
-
 const smallImageStyles = {
   height: "100vh",
   objectFit: "cover",
@@ -100,11 +100,9 @@ export default class Section extends Component {
 
     if (this.props.index % 2 === 0) {
       return (
-        <section 
-          style={sectionStyles} 
-          className="row justify-content-center" 
-          key={`Section${id}`}
-          id={`${id}`}
+        <div 
+          className={rowClasses}
+          id={`${id}`}  
         >
           <div className={imageDivClasses}>
             <img
@@ -115,7 +113,7 @@ export default class Section extends Component {
               alt=""
             ></img>
           </div>
-          <div className="col-sm-12 d-block d-lg-none">
+          <div className={mobileImageClasses}>
             <img
               src={assets[mobile]}
               style={smallImageStyles}
@@ -140,17 +138,15 @@ export default class Section extends Component {
               <span style={scrollArrowStyles}></span>
             </AnchorLink>
           </div>
-        </section>
+        </div>
       )
     } else {
       return (
-        <section 
-          style={sectionStyles} 
-          className="row justify-content-center" 
-          key={`Section${id}`}
+        <div
+          className={rowClasses}
           id={`${id}`}
         >
-          <div className="col-sm-12 d-block d-lg-none">
+          <div className={mobileImageClasses}>
             <img
               src={assets[mobile]}
               style={smallImageStyles}
@@ -184,7 +180,7 @@ export default class Section extends Component {
               alt=""
             ></img>
           </div>
-        </section>
+        </div>
       )
     }
   }

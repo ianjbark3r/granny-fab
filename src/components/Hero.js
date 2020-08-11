@@ -24,7 +24,10 @@ const bgStylesMobile = {
 const Hero = () => {
   return (
     <>
-      <div className="row justify-content-center">
+      <div 
+        className="row justify-content-center"
+        id="home"
+      >
         <div 
           style={bgStyles} 
           className="col d-none d-md-block text-center"

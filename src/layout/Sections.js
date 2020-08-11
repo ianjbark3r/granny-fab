@@ -2,7 +2,7 @@ export const sections = [
   {
     id: "glasses",
     buttonTxt: "shop glasses",
-    descP1: "A legitimate sparkle for your eye! Specialized in eyewear, including sunglasses, goggles, kaleidoscope glasses, and more!",
+    descP1: "A legitimate sparkle for your eye! Specializing in eyewear, including sunglasses, goggles, kaleidoscope glasses, and more!",
     descP2: "Custom options available. Each pair is unique, one of a kind.",
     descP3: "",
     descP4: "",

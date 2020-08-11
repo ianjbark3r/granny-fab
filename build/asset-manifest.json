@@ -1,20 +1,32 @@
 {
   "files": {
-    "main.js": "/static/js/main.26a22043.chunk.js",
-    "main.js.map": "/static/js/main.26a22043.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/js/2.adebb284.chunk.js": "/static/js/2.adebb284.chunk.js",
-    "static/js/2.adebb284.chunk.js.map": "/static/js/2.adebb284.chunk.js.map",
+    "main.js": "/static/js/main.cc3cb8cd.chunk.js",
+    "main.js.map": "/static/js/main.cc3cb8cd.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.699724ea.js",
+    "runtime-main.js.map": "/static/js/runtime-main.699724ea.js.map",
+    "static/js/2.b994bc6a.chunk.js": "/static/js/2.b994bc6a.chunk.js",
+    "static/js/2.b994bc6a.chunk.js.map": "/static/js/2.b994bc6a.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.769e81e17ec2d891041b211dfc319c4a.js": "/precache-manifest.769e81e17ec2d891041b211dfc319c4a.js",
+    "precache-manifest.06c0efc3434e68de7e7bcb58b5dbe73c.js": "/precache-manifest.06c0efc3434e68de7e7bcb58b5dbe73c.js",
     "service-worker.js": "/service-worker.js",
+    "static/js/2.b994bc6a.chunk.js.LICENSE.txt": "/static/js/2.b994bc6a.chunk.js.LICENSE.txt",
+    "static/media/about-photo-mobile.jpg": "/static/media/about-photo-mobile.a037596c.jpg",
     "static/media/about-photo.jpg": "/static/media/about-photo.a46430f9.jpg",
     "static/media/gfab-logo.png": "/static/media/gfab-logo.b72c7709.png",
+    "static/media/glasses-photo-mobile.jpg": "/static/media/glasses-photo-mobile.01146b72.jpg",
     "static/media/glasses-photo.jpg": "/static/media/glasses-photo.a3f232dd.jpg",
+    "static/media/hats-photo-mobile.jpg": "/static/media/hats-photo-mobile.99743bbe.jpg",
     "static/media/hats-photo.jpg": "/static/media/hats-photo.2871f56a.jpg",
-    "static/media/hero-bg.jpg": "/static/media/hero-bg.23e32b38.jpg",
+    "static/media/hero-bg-mobile.jpg": "/static/media/hero-bg-mobile.aee0ff32.jpg",
+    "static/media/hero-bg.jpg": "/static/media/hero-bg.f94b15dd.jpg",
+    "static/media/janties-photo-mobile.jpg": "/static/media/janties-photo-mobile.2d82e064.jpg",
     "static/media/janties-photo.jpg": "/static/media/janties-photo.2370f72c.jpg",
+    "static/media/story-photo-mobile.jpg": "/static/media/story-photo-mobile.dd23bbf9.jpg",
     "static/media/story-photo.jpg": "/static/media/story-photo.33592c6e.jpg"
-  }
+  },
+  "entrypoints": [
+    "static/js/runtime-main.699724ea.js",
+    "static/js/2.b994bc6a.chunk.js",
+    "static/js/main.cc3cb8cd.chunk.js"
+  ]
 }
