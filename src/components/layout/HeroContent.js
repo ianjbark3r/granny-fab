@@ -1,6 +1,8 @@
 import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
+import { sections } from '../../layout/Sections';
+
 import logo from '../../gfab-logo.png';
 
 const largeTitleStyles = {
@@ -74,7 +76,7 @@ const HeroContent = () => {
       <a href="https://www.depop.com/grannyfab/">
         <button style={buttonStyles} className="mr-2">shop</button>
       </a>
-      <AnchorLink href="#glasses">
+      <AnchorLink href={`#${sections[0].id}`}>
         <button style={buttonStyles}>learn more</button>
       </AnchorLink>
     </>

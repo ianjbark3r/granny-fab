@@ -1,5 +1,17 @@
 export const sections = [
   {
+    id: "masks",
+    buttonTxt: "shop masks",
+    descP1: "When faced with a pandemic where you are required to wear a mask, why not make that mask the most fabulous accessory you own?",
+    descP2: "Whether your eyes require fringe, gems, or sequins to bring out the extra sparkle in them, know that your mask will put the couture in COVID.",
+    descP3: "",
+    descP4: "",
+    img: "masksPhoto",
+    mobile: "masksMobile",
+    title: "MASKS",
+    url: "https://masks.grannyfab.com/"
+  },
+  {
     id: "glasses",
     buttonTxt: "shop glasses",
     descP1: "A legitimate sparkle for your eye! Specializing in eyewear, including sunglasses, goggles, kaleidoscope glasses, and more!",

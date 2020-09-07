@@ -97,12 +97,12 @@ export default class Section extends Component {
       url
     } = this.props.section;
 
-    if (this.props.index % 2 === 0) {
-      return (
-        <div 
-          className={rowClasses}
-          id={`${id}`}  
-        >
+    return (
+      <div 
+        className={rowClasses}
+        id={`${id}`}  
+      >
+        {this.props.index % 2 === 0 && (
           <div className={imageDivClasses}>
             <div id={`${title}CarouselControls`} className="carousel slide" dataRide="carousel">
               <div class="carousel-inner">
@@ -134,19 +134,19 @@ export default class Section extends Component {
                   ></img>
                 </div>
               </div>
-              <a 
-                class="carousel-control-prev" 
-                href={`#${title}CarouselControls`} 
-                role="button" 
+              <a
+                class="carousel-control-prev"
+                href={`#${title}CarouselControls`}
+                role="button"
                 data-slide="prev"
               >
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
               </a>
-              <a 
-                class="carousel-control-next" 
-                href={`#${title}CarouselControls`} 
-                role="button" 
+              <a
+                class="carousel-control-next"
+                href={`#${title}CarouselControls`}
+                role="button"
                 data-slide="next"
               >
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -154,64 +154,37 @@ export default class Section extends Component {
               </a>
             </div>
           </div>
-          <div className={mobileImageClasses}>
-            <img
-              src={assets[mobile]}
-              style={smallImageStyles}
-              className={imageClasses}
-              key={`img-sm-${id}`}
-              alt=""
-            ></img>
-            <AnchorLink href={`#${id}-desc`}>
-              <span style={darkScrollArrowStyles}></span>
-            </AnchorLink>
-          </div>
-          <div style={descriptionStyles} className={descriptionClasses} key={`Description${id}`} id={`${id}-desc`}>
-            <h1 style={titleStyles} key={`Title${id}`}>{title}</h1>
-            {descP1 && <p style={descriptionItemStyles} key={`DescriptionItem1${id}`}>{descP1}</p>}
-            {descP2 && <p style={descriptionItemStyles} key={`DescriptionItem2${id}`}>{descP2}</p>}
-            {descP3 && <p style={descriptionItemStyles} key={`DescriptionItem3${id}`}>{descP3}</p>}
-            {descP4 && <p style={descriptionItemStyles} key={`DescriptionItem4${id}`}v>{descP4}</p>}
-            <a href={`${url}`}>
-              <button style={buttonStyles} key={`Button${id}`}>{buttonTxt}</button>
-            </a>
-            <AnchorLink href={`#${this.props.nextId}`}>
-              <span style={scrollArrowStyles}></span>
-            </AnchorLink>
-          </div>
+        )}
+        <div className={mobileImageClasses}>
+          <img
+            src={assets[mobile]}
+            style={smallImageStyles}
+            className={imageClasses}
+            key={`img-sm-${id}`}
+            alt=""
+          ></img>
+          <AnchorLink href={`#${id}-desc`}>
+            <span style={darkScrollArrowStyles}></span>
+          </AnchorLink>
         </div>
-      )
-    } else {
-      return (
-        <div
-          className={rowClasses}
-          id={`${id}`}
-        >
-          <div className={mobileImageClasses}>
-            <img
-              src={assets[mobile]}
-              style={smallImageStyles}
-              className={imageClasses}
-              key={`img-sm-${id}`}
-              alt=""
-            ></img>
-            <AnchorLink href={`#${id}-desc`}>
-              <span style={darkScrollArrowStyles}></span>
-            </AnchorLink>
-          </div>
-          <div style={descriptionStyles} className={descriptionClasses} key={`Description${id}`} id={`${id}-desc`}>
-            <h1 style={titleStyles} key={`Title${id}`}>{title}</h1>
-            {descP1 && <p style={descriptionItemStyles} key={`DescriptionItem1${id}`}>{descP1}</p>}
-            {descP2 && <p style={descriptionItemStyles} key={`DescriptionItem2${id}`}>{descP2}</p>}
-            {descP3 && <p style={descriptionItemStyles} key={`DescriptionItem3${id}`}>{descP3}</p>}
-            {descP4 && <p style={descriptionItemStyles} key={`DescriptionItem4${id}`}>{descP4}</p>}
-            <a href={`${url}`}>
-              <button style={buttonStyles} key={`Button${id}`}>{buttonTxt}</button>
-            </a>
-            <AnchorLink href={`#${this.props.nextId}`}>
-              <span style={scrollArrowStyles}></span>
-            </AnchorLink>
-          </div>
+        <div style={descriptionStyles} className={descriptionClasses} key={`Description${id}`} id={`${id}-desc`}>
+          <h1 style={titleStyles} key={`Title${id}`}>{title}</h1>
+          {descP1 && <p style={descriptionItemStyles} key={`DescriptionItem1${id}`}>{descP1}</p>}
+          {descP2 && <p style={descriptionItemStyles} key={`DescriptionItem2${id}`}>{descP2}</p>}
+          {descP3 && <p style={descriptionItemStyles} key={`DescriptionItem3${id}`}>{descP3}</p>}
+          {descP4 && <p style={descriptionItemStyles} key={`DescriptionItem4${id}`}v>{descP4}</p>}
+          <a 
+            href={`${url}`} 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <button style={buttonStyles} key={`Button${id}`}>{buttonTxt}</button>
+          </a>
+          <AnchorLink href={`#${this.props.nextId}`}>
+            <span style={scrollArrowStyles}></span>
+          </AnchorLink>
+        </div>
+        {this.props.index % 2 !== 0 && (
           <div className={imageDivClasses}>
             <div id={`${title}CarouselControls`} className="carousel slide" dataRide="carousel">
               <div class="carousel-inner">
@@ -243,19 +216,19 @@ export default class Section extends Component {
                   ></img>
                 </div>
               </div>
-              <a 
-                class="carousel-control-prev" 
-                href={`#${title}CarouselControls`} 
-                role="button" 
+              <a
+                class="carousel-control-prev"
+                href={`#${title}CarouselControls`}
+                role="button"
                 data-slide="prev"
               >
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
               </a>
-              <a 
-                class="carousel-control-next" 
-                href={`#${title}CarouselControls`} 
-                role="button" 
+              <a
+                class="carousel-control-next"
+                href={`#${title}CarouselControls`}
+                role="button"
                 data-slide="next"
               >
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -263,8 +236,8 @@ export default class Section extends Component {
               </a>
             </div>
           </div>
-        </div>
-      )
-    }
+        )}
+      </div>
+    )
   }
 };
