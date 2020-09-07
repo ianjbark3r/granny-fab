@@ -5,14 +5,13 @@ import { assets } from '../images/Assets';
 
 const descriptionClasses = "col-md col-10";
 
-const imageClasses = "img-fluid mx-auto";
+const imageClasses = "d-block w-100";
 
 const imageDivClasses = "col-md-6 d-none d-lg-block px-0";
 
 const mobileImageClasses = "col-sm d-block d-lg-none px-0";
 
 const rowClasses = "row justify-content-center";
-
 
 const buttonStyles = {
   backgroundColor:"#FFF",
@@ -105,13 +104,55 @@ export default class Section extends Component {
           id={`${id}`}  
         >
           <div className={imageDivClasses}>
-            <img
-              src={assets[img]}
-              style={largeImageStyles}
-              className={imageClasses}
-              key={`img-lg-${id}`}
-              alt=""
-            ></img>
+            <div id={`${title}CarouselControls`} className="carousel slide" dataRide="carousel">
+              <div class="carousel-inner">
+                <div className="carousel-item active">
+                  <img
+                    src={assets[`${img}0`]}
+                    style={largeImageStyles}
+                    className={imageClasses}
+                    key={`img-lg-${id}`}
+                    alt=""
+                  ></img>
+                </div>
+                <div className="carousel-item">
+                  <img
+                    src={assets[`${img}1`]}
+                    style={largeImageStyles}
+                    className={imageClasses}
+                    key={`img-lg-${id}`}
+                    alt=""
+                  ></img>
+                </div>
+                <div className="carousel-item">
+                  <img
+                    src={assets[`${img}2`]}
+                    style={largeImageStyles}
+                    className={imageClasses}
+                    key={`img-lg-${id}`}
+                    alt=""
+                  ></img>
+                </div>
+              </div>
+              <a 
+                class="carousel-control-prev" 
+                href={`#${title}CarouselControls`} 
+                role="button" 
+                data-slide="prev"
+              >
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a 
+                class="carousel-control-next" 
+                href={`#${title}CarouselControls`} 
+                role="button" 
+                data-slide="next"
+              >
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
           </div>
           <div className={mobileImageClasses}>
             <img
@@ -172,13 +213,55 @@ export default class Section extends Component {
             </AnchorLink>
           </div>
           <div className={imageDivClasses}>
-            <img
-              src={assets[img]}
-              style={largeImageStyles}
-              className={imageClasses}
-              key={`img-lg-${id}`}
-              alt=""
-            ></img>
+            <div id={`${title}CarouselControls`} className="carousel slide" dataRide="carousel">
+              <div class="carousel-inner">
+                <div className="carousel-item active">
+                  <img
+                    src={assets[`${img}0`]}
+                    style={largeImageStyles}
+                    className={imageClasses}
+                    key={`img-lg-${id}`}
+                    alt=""
+                  ></img>
+                </div>
+                <div className="carousel-item">
+                  <img
+                    src={assets[`${img}1`]}
+                    style={largeImageStyles}
+                    className={imageClasses}
+                    key={`img-lg-${id}`}
+                    alt=""
+                  ></img>
+                </div>
+                <div className="carousel-item">
+                  <img
+                    src={assets[`${img}2`]}
+                    style={largeImageStyles}
+                    className={imageClasses}
+                    key={`img-lg-${id}`}
+                    alt=""
+                  ></img>
+                </div>
+              </div>
+              <a 
+                class="carousel-control-prev" 
+                href={`#${title}CarouselControls`} 
+                role="button" 
+                data-slide="prev"
+              >
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a 
+                class="carousel-control-next" 
+                href={`#${title}CarouselControls`} 
+                role="button" 
+                data-slide="next"
+              >
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
           </div>
         </div>
       )
