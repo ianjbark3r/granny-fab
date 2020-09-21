@@ -19,15 +19,28 @@ const logoStylesDesktop = {
 }
 
 const logoStylesMobile = {
-  paddingTop: "15vh",
+  paddingTop: "10vh",
   maxWidth: "90vw"
+}
+
+const darkScrollArrowStyles = {
+  position: "absolute",
+  bottom: "4vh",
+  left: "50%",
+  width: "24px",
+  height: "24px",
+  marginLeft: "-12px",
+  borderLeft: "4px solid #fff",
+  borderBottom: "4px solid #fff",
+  WebkitTransform: "rotate(-45deg)",
+  transform: "rotate(-45deg)",
+  boxSizing: "border-box"
 }
 
 const smallTitleStyles = {
   fontFamily: "Helvetica Neue, Arial, sans-serif",
   fontSize: "6rem",
   fontWeight: "600",
-  paddingTop: "14vh",
   textShadow: "0px 2px 4px #000"
 }
 
@@ -41,9 +54,9 @@ const subtitleStylesDesktop = {
 
 const subtitleStylesMobile = {
   fontFamily: "Helvetica Neue, Arial, sans-serif",
-  fontSize: "1.5rem",
+  fontSize: "1.8rem",
   lineHeight: "2rem",
-  marginTop: "2.5vh",
+  marginTop: "54vh",
   textShadow: "0px 2px 3px #000"
 }
 
@@ -52,32 +65,32 @@ const buttonStyles = {
   border: "1px solid",
   fontSize: "1.2rem",
   height: "2.4rem",
-  marginTop: "7vh",
+  marginTop: "2vh",
   width: "10rem"
 }
 
 const HeroContent = () => {
   return (
     <>
-      <h1 style={largeTitleStyles} className="display-1 d-none d-lg-block">
+      <h1 style={largeTitleStyles} className="display-1 d-none d-md-block">
         <img style={logoStylesDesktop} src={logo} alt="Granny Fab Accoutrements" />
       </h1>
-      <h1 style={smallTitleStyles} className="display-1 d-block d-lg-none">
+      <h1 style={smallTitleStyles} className="display-1 d-block d-md-none">
         <img style={logoStylesMobile} src={logo} alt="Granny Fab Accoutrements" />
       </h1>
-      <p style={subtitleStylesDesktop} className="d-none d-lg-block">
+      <p style={subtitleStylesDesktop} className="d-none d-md-block">
         <span style={{ display: "block" }}>when your favorite</span>
         <span style={{ display: "block" }}>color is sparkle</span>
       </p>
-      <p style={subtitleStylesMobile} className="d-block d-lg-none">
+      <p style={subtitleStylesMobile} className="d-block d-md-none">
         <span style={{ display: "block" }}>when your favorite</span>
         <span style={{ display: "block" }}>color is sparkle</span>
       </p>
       <a href="https://www.depop.com/grannyfab/">
-        <button style={buttonStyles} className="mr-2">shop</button>
+        <button style={buttonStyles} className="mr-2 d-none d-md-inline">shop</button>
       </a>
       <AnchorLink href={`#${sections[0].id}`}>
-        <button style={buttonStyles}>learn more</button>
+        <span style={darkScrollArrowStyles}></span>
       </AnchorLink>
     </>
   )

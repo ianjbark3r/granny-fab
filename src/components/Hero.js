@@ -3,7 +3,7 @@ import React from 'react';
 import HeroContent from './layout/HeroContent';
 
 import heroBg from '../images/hero-bg.jpg';
-import heroBgMobile from '../images/hero-bg-mobile.jpg'
+import heroBgMobile from '../images/hero-mobile-0.jpg'
 
 const bgStyles= {
   backgroundImage:`url(${heroBg})`,

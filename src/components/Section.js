@@ -69,12 +69,6 @@ const scrollArrowStyles = {
   boxSizing: "border-box"
 }
 
-const smallImageStyles = {
-  height: "100vh",
-  objectFit: "cover",
-  width: "auto"
-}
-
 const titleStyles = {
   fontSize:"2.5rem", 
   fontWeight:"700", 
@@ -102,16 +96,80 @@ export default class Section extends Component {
         className={rowClasses}
         id={`${id}`}  
       >
+        <div className={mobileImageClasses}>
+          <div
+            id={`${id}CarouselControlsMobile`}
+            className="carousel slide"
+          >
+            <div className="carousel-inner">
+              <div className="carousel-item active">
+                <img
+                  src={assets[`${mobile}0`]}
+                  style={largeImageStyles}
+                  className={imageClasses}
+                  key={`img-sm-${id}`}
+                  alt=""
+                ></img>
+              </div>
+              <div className="carousel-item">
+                <img
+                  src={assets[`${mobile}1`]}
+                  style={largeImageStyles}
+                  className={imageClasses}
+                  key={`img-sm-${id}`}
+                  alt=""
+                ></img>
+              </div>
+              <div className="carousel-item">
+                <img
+                  src={assets[`${mobile}2`]}
+                  style={largeImageStyles}
+                  className={imageClasses}
+                  key={`img-sm-${id}`}
+                  alt=""
+                ></img>
+              </div>
+            </div>
+            {assets[`${img}1`] && (
+              <>
+                <a
+                  className="carousel-control-prev"
+                  href={`#${id}CarouselControlsMobile`}
+                  role="button"
+                  data-slide="prev"
+                >
+                  <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span className="sr-only">Previous</span>
+                </a>
+                <a
+                  className="carousel-control-next"
+                  href={`#${id}CarouselControlsMobile`}
+                  role="button"
+                  data-slide="next"
+                >
+                  <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span className="sr-only">Next</span>
+                </a>
+              </>
+            )}
+          </div>
+          <AnchorLink href={`#${id}-desc`}>
+            <span style={darkScrollArrowStyles}></span>
+          </AnchorLink>
+        </div>
         {this.props.index % 2 === 0 && (
           <div className={imageDivClasses}>
-            <div id={`${title}CarouselControls`} className="carousel slide" dataRide="carousel">
-              <div class="carousel-inner">
+            <div
+              id={`${id}CarouselControlsLeft`}
+              className="carousel slide"
+            >
+              <div className="carousel-inner">
                 <div className="carousel-item active">
                   <img
                     src={assets[`${img}0`]}
                     style={largeImageStyles}
                     className={imageClasses}
-                    key={`img-lg-${id}`}
+                    key={`img-sm-${id}`}
                     alt=""
                   ></img>
                 </div>
@@ -120,7 +178,7 @@ export default class Section extends Component {
                     src={assets[`${img}1`]}
                     style={largeImageStyles}
                     className={imageClasses}
-                    key={`img-lg-${id}`}
+                    key={`img-sm-${id}`}
                     alt=""
                   ></img>
                 </div>
@@ -129,44 +187,36 @@ export default class Section extends Component {
                     src={assets[`${img}2`]}
                     style={largeImageStyles}
                     className={imageClasses}
-                    key={`img-lg-${id}`}
+                    key={`img-sm-${id}`}
                     alt=""
                   ></img>
                 </div>
               </div>
-              <a
-                class="carousel-control-prev"
-                href={`#${title}CarouselControls`}
-                role="button"
-                data-slide="prev"
-              >
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a
-                class="carousel-control-next"
-                href={`#${title}CarouselControls`}
-                role="button"
-                data-slide="next"
-              >
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
+              {assets[`${img}1`] && (
+                <>
+                  <a
+                    className="carousel-control-prev"
+                    href={`#${id}CarouselControlsLeft`}
+                    role="button"
+                    data-slide="prev"
+                  >
+                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span className="sr-only">Previous</span>
+                  </a>
+                  <a
+                    className="carousel-control-next"
+                    href={`#${id}CarouselControlsLeft`}
+                    role="button"
+                    data-slide="next"
+                  >
+                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span className="sr-only">Next</span>
+                  </a>
+                </>
+              )}
             </div>
           </div>
         )}
-        <div className={mobileImageClasses}>
-          <img
-            src={assets[mobile]}
-            style={smallImageStyles}
-            className={imageClasses}
-            key={`img-sm-${id}`}
-            alt=""
-          ></img>
-          <AnchorLink href={`#${id}-desc`}>
-            <span style={darkScrollArrowStyles}></span>
-          </AnchorLink>
-        </div>
         <div style={descriptionStyles} className={descriptionClasses} key={`Description${id}`} id={`${id}-desc`}>
           <h1 style={titleStyles} key={`Title${id}`}>{title}</h1>
           {descP1 && <p style={descriptionItemStyles} key={`DescriptionItem1${id}`}>{descP1}</p>}
@@ -180,14 +230,17 @@ export default class Section extends Component {
           >
             <button style={buttonStyles} key={`Button${id}`}>{buttonTxt}</button>
           </a>
-          <AnchorLink href={`#${this.props.nextId}`}>
+          <AnchorLink href={(id === 'about') ? '#home' : `#${this.props.nextId}`}>
             <span style={scrollArrowStyles}></span>
           </AnchorLink>
         </div>
         {this.props.index % 2 !== 0 && (
           <div className={imageDivClasses}>
-            <div id={`${title}CarouselControls`} className="carousel slide" dataRide="carousel">
-              <div class="carousel-inner">
+            <div 
+              id={`${id}CarouselControlsRight`} 
+              className="carousel slide"
+            >
+              <div className="carousel-inner">
                 <div className="carousel-item active">
                   <img
                     src={assets[`${img}0`]}
@@ -216,24 +269,28 @@ export default class Section extends Component {
                   ></img>
                 </div>
               </div>
-              <a
-                class="carousel-control-prev"
-                href={`#${title}CarouselControls`}
-                role="button"
-                data-slide="prev"
-              >
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a
-                class="carousel-control-next"
-                href={`#${title}CarouselControls`}
-                role="button"
-                data-slide="next"
-              >
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
+              {assets[`${img}1`] && (
+                <>
+                  <a
+                    className="carousel-control-prev"
+                    href={`#${id}CarouselControlsRight`}
+                    role="button"
+                    data-slide="prev"
+                  >
+                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span className="sr-only">Previous</span>
+                  </a>
+                  <a
+                    className="carousel-control-next"
+                    href={`#${id}CarouselControlsRight`}
+                    role="button"
+                    data-slide="next"
+                  >
+                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span className="sr-only">Next</span>
+                  </a>
+                </>
+              )}
             </div>
           </div>
         )}
