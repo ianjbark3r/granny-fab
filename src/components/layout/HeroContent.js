@@ -56,7 +56,7 @@ const subtitleStylesMobile = {
   fontFamily: "Helvetica Neue, Arial, sans-serif",
   fontSize: "1.8rem",
   lineHeight: "2rem",
-  marginTop: "54vh",
+  marginTop: "48vh",
   textShadow: "0px 2px 3px #000"
 }
 

@@ -18,7 +18,7 @@ const bgStylesMobile = {
   backgroundSize: "cover",
   backgroundPosition: "center",
   color: "white",
-  height: "100vh"
+  height: "95vh"
 }
 
 const Hero = () => {
