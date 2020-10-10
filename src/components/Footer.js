@@ -11,7 +11,7 @@ const Footer = () => {
       className="row justify-content-center p-5"
     >
       <div className="col">
-        <strong>Copyright Granny Fab, 2019</strong>
+        <strong>Copyright Granny Fab, 2020</strong>
       </div>
       <div className="col text-right">
         <ul style={{ listStyleType:"none" }}>
